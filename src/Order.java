@@ -20,6 +20,13 @@ public class Order {
     }
 
     public double getTotal() {
-        return 0;
+        double total = 0;
+
+        for (Pizza x:pizzas
+             ) {
+            total+=x.getTotal();
+
+        }
+        return total;
     }
 }
