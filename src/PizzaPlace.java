@@ -16,11 +16,27 @@ public class PizzaPlace {
         this.name = name;
         this.phone = phone;
         this.orders = new ArrayList<Order>();
-        
-        this.sizes = new ArrayList<Size>();
-        this.crusts = new ArrayList<Crust>();
-        this.ingredients = new ArrayList<Ingredient>();
 
+        //Sizes
+        this.sizes = new ArrayList<Size>();
+        this.sizes.add(new Size("Small", 6, 8));
+        this.sizes.add(new Size("Medium", 10, 12));
+        this.sizes.add(new Size("Large", 12, 16));
+        this.sizes.add(new Size("Super", 16, 20));
+
+        //Crusts
+        this.crusts = new ArrayList<Crust>();
+        this.crusts.add(new Crust("Thin", 0));
+        this.crusts.add(new Crust("Regular", 0));
+        this.crusts.add(new Crust("Deep-dish", 0));
+
+        //Ingredients
+        this.ingredients = new ArrayList<Ingredient>();
+        this.ingredients.add(new Ingredient("Cheese", 1));
+        this.ingredients.add(new Ingredient("Mushrooms", 1));
+        this.ingredients.add(new Ingredient("Chicken", 1));
+        this.ingredients.add(new Ingredient("Pepperoni", 1));
+        this.ingredients.add(new Ingredient("Tuna", 1));
     }
 
 
@@ -54,5 +70,21 @@ public class PizzaPlace {
 
     public void addIngredient (Ingredient ingredient) {
         this.ingredients.add(ingredient);
+    }
+
+    public ArrayList<Crust> getCrusts() {
+        return crusts;
+    }
+
+    public ArrayList<Size> getSizes() {
+        return sizes;
+    }
+
+    public ArrayList<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public ArrayList<Order> getOrders() {
+        return orders;
     }
 }
