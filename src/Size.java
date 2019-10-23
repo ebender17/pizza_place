@@ -31,6 +31,10 @@ public class Size implements Chargable{
 
     @Override
     public double getPrice() {
-        return 0;
+        return price;
+    }
+
+    public String toString() {
+        return this.getName() + " - " + this.getPrice();
     }
 }

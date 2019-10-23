@@ -22,4 +22,8 @@ public class Ingredient implements Chargable{
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public String toString() {
+        return this.getName() + " - " + this.getPrice();
+    }
 }
