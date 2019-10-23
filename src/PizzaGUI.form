@@ -15,9 +15,10 @@
         <children>
           <component id="bae9f" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <icon value="assets/pizza_pie.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -32,9 +33,10 @@
           </component>
           <component id="d0034" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <icon value="assets/pizza_pie.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -51,6 +53,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <icon value="assets/quit.png"/>
               <text value="Quit"/>
             </properties>
           </component>
@@ -120,7 +123,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="e89ef" class="javax.swing.JTextField" binding="receiptTextField">
+              <component id="772fb" class="javax.swing.JTextArea" binding="receiptTextArea">
                 <constraints/>
                 <properties/>
               </component>

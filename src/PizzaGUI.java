@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class PizzaGUI extends JFrame {
@@ -62,6 +64,61 @@ public class PizzaGUI extends JFrame {
         setSize(800, 600);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        quitButton.addActionListener((ActionEvent e) -> {
+            int selectedOption = JOptionPane.showConfirmDialog(
+                    null,
+                    "Are you sure you want to quit?",
+                    "Choose",
+                    JOptionPane.YES_NO_OPTION);
+            if (selectedOption == JOptionPane.YES_OPTION) {
+                System.exit(0);
+
+            }
+        });
+
+        orderButton.addActionListener((ActionEvent e) -> {
+            //Create Order
+            Order order = new Order();
+
+            //Get User Selections
+            ArrayList<Ingredient> selectedIngredients = new ArrayList<>();
+            for (JCheckBox item : ingredientCheckboxes) {
+                if (item.isSelected()) {
+                    selectedIngredients.add((Ingredient) item.getClientProperty("value"));
+                }
+            }
+
+            Crust selectedCrust = null;
+            for (JRadioButton item : crustsRadioButtons) {
+                if (item.isSelected()) {
+                    selectedCrust = (Crust) item.getClientProperty("value");
+                }
+            }
+
+
+            Size selectedSize = (Size) sizeCombo.getSelectedItem();
+            // Create Pizza
+            Pizza pizza = new Pizza(selectedCrust, selectedSize, selectedIngredients);
+
+            //Add pizza to the Order
+            order.addPizza(pizza);
+
+            //Display the receipt
+            String receipt = order.getRecipt();
+            receiptTextArea.setText(receipt);
+
+            //add order to the pizzaPlace History?
+        });
+
+        clearButton.addActionListener((ActionEvent e)-> {
+            receiptTextArea.setText("");
+            for (JCheckBox item : ingredientCheckboxes) {
+                item.setSelected(false);
+            }
+            for (JRadioButton item : crustsRadioButtons) {
+                crustGroup.clearSelection();
+            }
+        });
     }
 
     private void updateUI() {
