@@ -7,6 +7,8 @@ public class PizzaPlace {
     ArrayList<Size> sizes;
     ArrayList<Ingredient> ingredients;
     ArrayList<Order> orders;
+    private static PizzaPlace instance;
+
 
 
 
@@ -37,6 +39,14 @@ public class PizzaPlace {
         this.ingredients.add(new Ingredient("Chicken", 1));
         this.ingredients.add(new Ingredient("Pepperoni", 1));
         this.ingredients.add(new Ingredient("Tuna", 1));
+    }
+
+    public static PizzaPlace getInstance() {
+        if (instance == null) {
+            instance = new PizzaPlace("IT2045C", "123-123-1234");
+            
+        }
+        return instance;
     }
 
 

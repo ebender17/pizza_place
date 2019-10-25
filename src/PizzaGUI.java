@@ -26,6 +26,10 @@ public class PizzaGUI extends JFrame {
     private ArrayList<Size> availableSizes;
     private ArrayList<Ingredient> availableIngredients;
 
+    PizzaPlace pizzaPlace = PizzaPlace.getInstance();
+
+
+
     public PizzaGUI(String title, ArrayList<Crust> crusts, ArrayList<Size> sizes, ArrayList<Ingredient> ingredients) throws HeadlessException {
         super(title);
         pizzaLabel.setText(title);
@@ -107,7 +111,10 @@ public class PizzaGUI extends JFrame {
             String receipt = order.getRecipt();
             receiptTextArea.setText(receipt);
 
-            //add order to the pizzaPlace History?
+            //add order to the pizzaPlace History
+            pizzaPlace.placeOrder(order);
+
+
         });
 
         clearButton.addActionListener((ActionEvent e)-> {
