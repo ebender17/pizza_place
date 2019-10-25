@@ -12,12 +12,16 @@ public class PizzaPlace {
 
 
 
+    private ArrayList<Subscriber> subscribers;
+    ArrayList<String> names;
 
 
     public PizzaPlace(String name, String phone) {
         this.name = name;
         this.phone = phone;
         this.orders = new ArrayList<Order>();
+        names = new ArrayList<>();
+        subscribers = new ArrayList<>();
 
         //Sizes
         this.sizes = new ArrayList<Size>();
@@ -41,13 +45,33 @@ public class PizzaPlace {
         this.ingredients.add(new Ingredient("Tuna", 1));
     }
 
-    public static PizzaPlace getInstance() {
+    public static PizzaPlace getInstance(String title, String phone) {
         if (instance == null) {
-            instance = new PizzaPlace("IT2045C", "123-123-1234");
-            
+            instance = new PizzaPlace(title, phone);
+
         }
         return instance;
     }
+
+    public void addSubscriber(Subscriber s) {
+        subscribers.add(s);
+    }
+
+    public void unsubscribe (Subscriber s) {
+        subscribers.remove(s);
+    }
+
+    public void notifySubscribers() {
+        for (Subscriber s:subscribers
+             ) {
+            s.update();
+        }
+    }
+
+    public ArrayList<String> getNames() {
+        return names;
+    }
+
 
 
     public String getName() {
@@ -68,6 +92,7 @@ public class PizzaPlace {
 
     public void placeOrder(Order order) {
         this.orders.add(order);
+        notifySubscribers();
     }
 
     public void addSize(Size size) {
