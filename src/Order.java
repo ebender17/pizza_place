@@ -46,6 +46,24 @@ public class Order {
         return receiptString;
     }
 
+    //order without prices
+    public String getView() {
+        String pizzaView = "";
+        for (int pizzaCounter = 0; pizzaCounter < pizzas.size(); pizzaCounter++) {
+            pizzaView += "------ Pizza" + (pizzaCounter + 1) + "-----\n";
+            pizzaView+= String.format("%-10s & %-10s\t\n",
+                    pizzas.get(pizzaCounter).getCrust().getName(),
+                    pizzas.get(pizzaCounter).getSize().getName()
+            );
+            //Toppings
+            for (Ingredient ingredient: this.pizzas.get(pizzaCounter).getIngredients()) {
+                pizzaView+= String.format("    %-20s\t\n", ingredient.getName());
+            }
+
+        }
+        return pizzaView;
+    }
+
     public double getTotal() {
         double total = 0;
 
