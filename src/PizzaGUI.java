@@ -26,7 +26,8 @@ public class PizzaGUI extends JFrame {
     private ArrayList<Size> availableSizes;
     private ArrayList<Ingredient> availableIngredients;
 
-    PizzaPlace pizzaPlace = PizzaPlace.getInstance();
+    PizzaPlace pizzaPlace = PizzaPlace.getInstance("Pizza Place", "123-123-1234");
+
 
 
 

@@ -8,10 +8,6 @@ public class PizzaPlace {
     ArrayList<Ingredient> ingredients;
     ArrayList<Order> orders;
     private static PizzaPlace instance;
-
-
-
-
     private ArrayList<Subscriber> subscribers;
     ArrayList<String> names;
 
