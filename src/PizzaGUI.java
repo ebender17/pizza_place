@@ -29,8 +29,6 @@ public class PizzaGUI extends JFrame {
     PizzaPlace pizzaPlace = PizzaPlace.getInstance("Pizza Place", "123-123-1234");
 
 
-
-
     public PizzaGUI(String title, ArrayList<Crust> crusts, ArrayList<Size> sizes, ArrayList<Ingredient> ingredients) throws HeadlessException {
         super(title);
         pizzaLabel.setText(title);
@@ -118,7 +116,7 @@ public class PizzaGUI extends JFrame {
 
         });
 
-        clearButton.addActionListener((ActionEvent e)-> {
+        clearButton.addActionListener((ActionEvent e) -> {
             receiptTextArea.setText("");
             for (JCheckBox item : ingredientCheckboxes) {
                 item.setSelected(false);

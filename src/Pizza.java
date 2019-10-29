@@ -37,12 +37,12 @@ public class Pizza {
 
     public double getTotal() {
         double total = 0;
-        total+=size.getPrice();
-        total+=crust.getPrice();
+        total += size.getPrice();
+        total += crust.getPrice();
 
-        for (Ingredient x:ingredients
-             ) {
-            total+=x.getPrice();
+        for (Ingredient x : ingredients
+        ) {
+            total += x.getPrice();
 
         }
         return total;

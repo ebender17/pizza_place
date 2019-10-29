@@ -18,22 +18,22 @@ public class Order {
 
     public String getRecipt() {
         String receiptString =
-               "\t      ____       _                             \n"
-              +"\t    /  __  \\     (_) ___    __     ____     \n"
-              +"\t   /  /_/  /     / / /_   /  /_    /   /  _  /   \n"
-              +"\t  /  ___/     / /   /  /_    /  /_  / /_/ /    \n"
-              +"\t /_/          /_/  / ___/  / ___/ \\___/  \n";
+                "\t      ____       _                             \n"
+                        + "\t    /  __  \\     (_) ___    __     ____     \n"
+                        + "\t   /  /_/  /     / / /_   /  /_    /   /  _  /   \n"
+                        + "\t  /  ___/     / /   /  /_    /  /_  / /_/ /    \n"
+                        + "\t /_/          /_/  / ___/  / ___/ \\___/  \n";
         receiptString += "===============================================\n";
         //Crust and Size
         for (int pizzaCounter = 0; pizzaCounter < pizzas.size(); pizzaCounter++) {
             receiptString += "------ Pizza" + (pizzaCounter + 1) + " : " + pizzas.get(pizzaCounter).getTotal() + " -----\n";
-            receiptString+= String.format("%-10s & %-10s\t\t$%5.2f\n",
+            receiptString += String.format("%-10s & %-10s\t\t$%5.2f\n",
                     pizzas.get(pizzaCounter).getCrust().getName(),
                     pizzas.get(pizzaCounter).getSize().getName(),
                     pizzas.get(pizzaCounter).getSize().getPrice()
             );
             //Toppings
-            for (Ingredient ingredient: this.pizzas.get(pizzaCounter).getIngredients()) {
+            for (Ingredient ingredient : this.pizzas.get(pizzaCounter).getIngredients()) {
                 receiptString += String.format("    %-20s\t\t$%5.2f\n", ingredient.getName(), ingredient.getPrice());
             }
 
@@ -41,7 +41,7 @@ public class Order {
             receiptString += String.format("Subtotal\t\t\t$%5.2f\n", this.getTotal());
             receiptString += String.format("Tax\t\t\t$%5.2f\n", this.getTotal() * TAX_RATE);
             receiptString += "---------------------------------------------------------------------\n";
-            receiptString += String.format("Total\t\t\t$%5.2f\n", this.getTotal() * (1.0 +TAX_RATE));
+            receiptString += String.format("Total\t\t\t$%5.2f\n", this.getTotal() * (1.0 + TAX_RATE));
         }
         return receiptString;
     }
@@ -51,13 +51,13 @@ public class Order {
         String pizzaView = "";
         for (int pizzaCounter = 0; pizzaCounter < pizzas.size(); pizzaCounter++) {
             pizzaView += "------ Pizza" + (pizzaCounter + 1) + "-----\n";
-            pizzaView+= String.format("%-10s & %-10s\t\n",
+            pizzaView += String.format("%-10s & %-10s\t\n",
                     pizzas.get(pizzaCounter).getCrust().getName(),
                     pizzas.get(pizzaCounter).getSize().getName()
             );
             //Toppings
-            for (Ingredient ingredient: this.pizzas.get(pizzaCounter).getIngredients()) {
-                pizzaView+= String.format("    %-20s\t\n", ingredient.getName());
+            for (Ingredient ingredient : this.pizzas.get(pizzaCounter).getIngredients()) {
+                pizzaView += String.format("    %-20s\t\n", ingredient.getName());
             }
 
         }
@@ -67,9 +67,9 @@ public class Order {
     public double getTotal() {
         double total = 0;
 
-        for (Pizza x:pizzas
-             ) {
-            total+=x.getTotal();
+        for (Pizza x : pizzas
+        ) {
+            total += x.getTotal();
 
         }
         return total;

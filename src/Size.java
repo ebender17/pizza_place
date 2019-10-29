@@ -1,4 +1,4 @@
-public class Size implements Chargable{
+public class Size implements Chargable {
     String name;
     double radius;
     double price;

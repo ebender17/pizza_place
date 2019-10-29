@@ -1,4 +1,4 @@
-public class Ingredient implements Chargable{
+public class Ingredient implements Chargable {
     String name;
     double price;
 

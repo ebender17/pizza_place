@@ -1,8 +1,11 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.time.Duration;
 import java.util.ArrayList;
 
-public class KitchenView extends JFrame implements Subscriber{
+public class KitchenView extends JFrame implements Subscriber {
     private JPanel mainPanel;
     private JPanel orderPanel;
     private JTextArea ordersTextArea;
@@ -18,8 +21,9 @@ public class KitchenView extends JFrame implements Subscriber{
 
         add(mainPanel);
         setVisible(true);
-        setSize(600,400);
+        setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         quitButton.addActionListener((ActionEvent e) -> {
             int selectedOption = JOptionPane.showConfirmDialog(
@@ -37,13 +41,14 @@ public class KitchenView extends JFrame implements Subscriber{
     private void updateOrdersArea() {
         ArrayList<Order> allOrders = pizzaPlace.getOrders();
         ordersTextArea.setText("");
-        for(Order order : allOrders) {
-            ordersTextArea.append(order.getView() + "n");
-
+        for (Order order : allOrders) {
+            ordersTextArea.append(order.getView() + "\n");
 
         }
 
+
     }
+
     @Override
     public void update() {
         updateOrdersArea();
