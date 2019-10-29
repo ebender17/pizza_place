@@ -5,17 +5,20 @@
 
 
 #### Self Assessment
--[ ] The program runs with no errors.
--[ ] Created a GUI application.
--[ ] Logic is sound.
--[ ] Proper usage of Git and GitHub (frequent commits, explanatory commit messages)
--[ ] **6 Extra Credit**: Singleton Pattern and History Keeping
--[ ] **10 Extra Credit**: Kitchen View with the Observer Design Pattern.
+-[X] The program runs with no errors.
+-[X] Created a GUI application.
+-[X] Logic is sound.
+-[X] Proper usage of Git and GitHub (frequent commits, explanatory commit messages)
+-[X] **6 Extra Credit**: Singleton Pattern and History Keeping
+-[X] **10 Extra Credit**: Kitchen View with the Observer Design Pattern.
 -[ ] **2 Extra Credit**: Identify those mistakes
 
-**Your Grade:**  /20
+**Your Grade:**  34/20
 
 **Notes:**
+I completed the Kitchen View with the Observer Design Pattern but I did not add in the 
+feature for how long it has been since the order was placed. Therefore, I 
+only gave myself an 8/10 for that extra credit. 
 
 **How long did it take you to complete this assignment?**
 
