@@ -2,7 +2,7 @@
 ## Assignment Self Assessment:
 #### Reflection
 [//]: <> (share your thoughts on the assignment, things you learnt and would like to remember when you look back at this assignment)
-
+Assignment completed for Computer Programming II. 
 
 #### Self Assessment
 -[X] The program runs with no errors.
@@ -11,16 +11,8 @@
 -[X] Proper usage of Git and GitHub (frequent commits, explanatory commit messages)
 -[X] **6 Extra Credit**: Singleton Pattern and History Keeping
 -[X] **10 Extra Credit**: Kitchen View with the Observer Design Pattern.
--[ ] **2 Extra Credit**: Identify those mistakes
 
 **Your Grade:**  34/20
-
-**Notes:**
-I completed the Kitchen View with the Observer Design Pattern but I did not add in the 
-feature for how long it has been since the order was placed. Therefore, I 
-only gave myself an 8/10 for that extra credit. 
-
-**How long did it take you to complete this assignment?**
 
 ______________________________________________________________________
 
@@ -63,8 +55,6 @@ For **6 Points of Extra Credit**, Look into the *Singleton* design patterns. (Yo
 
 For **10 Points of Extra Credit**, Create another Frame Application for the Kitchen view. The kitchen will need to know what the ingredients of each placed Pizza order. and how long has it been since each order was placed. The Kitchen View should be updated as soon as an order is placed. You should use the *Observer* Design pattern to subscribe the kitchen view to the pizza store class.
 
-As I was reviewing this week's videos, I found a few missing things and few mistakes in the UML representation. For
-
 Thoroughly test your application making sure that everything works correctly. Try for a nice looking layout.
 
 
@@ -75,4 +65,3 @@ Thoroughly test your application making sure that everything works correctly. Tr
 4. Proper usage of Git and GitHub (frequent commits, explanatory commit messages)
 5. **6 Extra Credit**: Singleton Pattern and History Keeping
 6. **10 Extra Credit**: Kitchen View with the Observer Design Pattern.
-7. **2 Extra Credit**: Identify those mistakes
